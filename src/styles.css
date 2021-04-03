@@ -1,0 +1,314 @@
+html, body {
+    height: 100vh;
+    width: 100vw;
+}
+
+/*Calendar*/
+
+.calendar-screen {
+    display: flex;
+    flex-flow: column;
+    height: 100vh;
+}
+
+.rbc-calendar {
+    height: 100%;
+}
+
+/* Modal */
+
+.ReactModalPortal>div {
+    opacity: 0;
+}
+
+.ReactModalPortal .ReactModal__Overlay {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    transition: opacity .2s ease-in-out;
+    z-index: 999;
+}
+
+.modal-fondo {
+    background-color: rgba(0, 0, 0, 0.3);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    position: fixed;
+}
+
+.ReactModalPortal .ReactModal__Overlay--after-open {
+    opacity: 1;
+}
+
+.ReactModalPortal .ReactModal__Overlay--before-close {
+    opacity: 0;
+}
+
+.modal {
+    background: white;
+    border-radius: 5px;
+    color: rgb(51, 51, 51);
+    display: inline;
+    max-height: 620px;
+    max-width: 500px;
+    outline: none;
+    padding: 10px;
+}
+
+/*DatePicker*/
+
+.react-datetime-picker input:focus {
+    outline: none;
+}
+
+.react-datetime-picker__wrapper {
+    border: 0px solid gray !important;
+}
+
+/*FABS*/
+
+.fab {
+    border-radius: 100%;
+    bottom: 25px;
+    font-size: 30px;
+    padding: 25px;
+    position: fixed;
+    right: 25px;
+    line-height: 0;
+}
+
+.fab-danger {
+    bottom: 25px;
+    padding: 10px;
+    position: fixed;
+    left: 25px;
+}
+
+.navbar {
+    background-color: #5CB34B;
+}
+
+.btn-logout {
+    color: #005BB7;
+    border-color: #005BB7;
+}
+
+.btn-logout:hover {
+    color: #fff;
+    background-color: #005BB7;
+    border-color: #005BB7;
+}
+
+.btn-password {
+    color: #3d3d3d;
+    border-color: #50555a;
+}
+
+.btn-password:hover {
+    color: #fff;
+    background-color: #50555a;
+    border-color: #50555a;
+}
+
+.ui__closeButton {
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.user__cards {
+    height: 440px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0px;
+    overflow: hidden;
+}
+
+.user__cards-container {
+    overflow: auto;
+}
+
+.user__card {
+    height: auto;
+    border-radius: .25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 2%;
+}
+
+.user__card-content {
+    position: relative;
+}
+
+.user__data {
+    display: flex;
+}
+
+.user__dataLabels {
+    display: flex;
+    flex-direction: column;
+}
+
+.user__card h5 {
+    font-size: 18px;
+}
+
+.user__username, .user__inputsContainer span {
+    font-style: italic;
+    font-size: 18px;
+    color: #978e8e;
+}
+
+.user__label {
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    color: #7896b4;
+    font-weight: 400;
+}
+
+.user__datadata {
+    color: #000000;
+    font-size: 16px;
+}
+
+input {
+    letter-spacing: normal;
+}
+
+.user__buttons {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.user__btn {
+    margin-top: 15px;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+.user__btn:hover {
+    cursor: pointer;
+    color: #5CB34B;
+    animation-name: bounce;
+    -moz-animation-name: bounce;
+    transition: all .2s ease-in-out;
+}
+
+.user__btnAdd:hover {
+    color: #5CB34B;
+}
+
+.user__btnCancel:hover {
+    color: #dc3545;
+}
+
+@keyframes bounce {
+    0%, 100%, 20%, 50%, 80% {
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+    }
+    40% {
+        -webkit-transform: translateY(-15px);
+        -ms-transform: translateY(-15px);
+        transform: translateY(-15px)
+    }
+    60% {
+        -webkit-transform: translateY(-5px);
+        -ms-transform: translateY(-5px);
+        transform: translateY(-5px)
+    }
+}
+
+.user__modal hr {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* .user__cardCreate {} */
+
+.user__cardCreate input {
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    margin: 0;
+    box-sizing: initial;
+    background-color: transparent;
+}
+
+.user__cardCreate .user__inputsContainer {
+    display: flex;
+    width: 100%;
+    font-size: calc(.2rem + 1vw)
+}
+
+.user__containerName {
+    display: inline-block;
+    min-width: 100px;
+}
+
+.user__inputsContainer .user__name {
+    width: 65%;
+    border-color: transparent;
+    font-weight: 500;
+    /* line-height: 1.2; */
+    margin-right: 5px;
+}
+
+.user__inputsContainer .user__label {
+    margin-right: 5px;
+}
+
+.user__selectRol {
+    font-size: calc(.2rem + .7vw);
+    border: none;
+    color: #978e8e;
+}
+
+.user__selectRol option {
+    font-size: calc(.1rem + 1vw);
+    border: none;
+    color: #978e8e;
+}
+
+.user__selectRol:focus {
+    outline: 0;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .user__card h5 {
+        font-size: 15px;
+    }
+    .user__username, .user__inputsContainer span {
+        font-size: 15px;
+    }
+    .user__label {
+        font-size: 10px;
+    }
+    .user__datadata {
+        font-size: 10px;
+    }
+    .user__buttons .btn {
+        width: auto;
+        font-size: 10px;
+    }
+    .user__card {
+        height: auto;
+        padding: 2%;
+    }
+}
